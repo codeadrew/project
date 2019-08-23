@@ -1,163 +1,23 @@
-/* style.css */
-/*
-font-family: 'Nanum Gothic', sans-serif;
-font-family: 'Noto Sans KR', sans-serif;
-font-family: 'Noto Sans', sans-serif;
-*/
-/*
-font-color : #4d4d4d;
-*/
-/*
-main-color : #03a665;
-sub-color : #ffc20d;
-*/
+/* 가변 영역 */
+@media (max-width: 768px) {
+    html,body{
+        width: 768px;
+    }
+    header .logo{
+        left: 50%;
+    }
+    header .lang{
+        left: 5%;
+    }
+    header .menu-btn{
+        right: 5%;
+    }
+    header .find-btn{
+        right: 12%;
+    }
 
-/* 초기화 코드 */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-html, body {
-    font-family: 'Nanum Gothic', sans-serif;
-    font-size: 100%;
-    color: #4d4d4d;
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-}
-ul {
-    list-style-type: none;
-}
-a {
-    text-decoration: none;
-    color: #4d4d4d;
-}
-
-/* header */
-header {
-    width: 100%;
-    height: 80px;
-    background: #03a665;
-    position: fixed;
-    top: 0;
-    z-index: 100;
-}
-header a img {
-    position: absolute;
-    width: 200px;
-    height: 50px;
-    left: 50%; top: 15px;
-    transform: translateX(-50%);
-}
-header .find-btn{
-    position: absolute;
-    right: 140px; top: 25px;
-    border: none;
-    background: none;
-    outline: none;
-}
-header .find-btn.show{
-    opacity: 0;
-    z-index: -1;
-}
-header .find-btn img {
-    width: 28px;
-    height: 28px;
-}
-header .menu-btn {
-    position: absolute;
-    right: 80px; top: 25px;
-    border: none;
-    background: none;
-    outline: none;
-}
-header .menu-btn img {
-    width: 30px;
-    height: 30px;
-}
-header .lang {
-    position: absolute;
-    top: 50%; left: 80px;
-    transform: translateY(-50%);
-}
-header .lang li {
-    font-weight: bold;
-    font-size: 14px;
-    float: left;
-}
-header .lang li a {
-    color: white;
-}
-
-header .lang span {
-    padding: 0 5px;
-    color: white;
-}
-
-/* search-icon */
-.searchtop{
-    width: 100%;
-    height: 120px;
-    opacity: 0;
-    height: 0;
-    transition: 0.5s;
-    overflow: hidden;
-    background: #fff;
-    position: fixed;
-    top: 80px;
-    z-index: 99;
-    padding: 20px;
-}
-.searchtop.show{
-    opacity: 1;
-    height: 120px;
-    transition: 0.5s;
-}
-.searchtop-container{
-    position: relative;
-    width: 800px;
-    height: 80px;
-    margin: 0 auto;
-    /* border: 1px solid red; */
-}
-.inp{
-    display: inline-block;
-    width: 800px;
-    height: 80px;
-    border: 1px solid #03A665;
-    box-sizing: border-box;
-}
-.inp input{
-    width: 600px;
-    height: 78px;
-    border: none;
-    font-size: 1.5em;
-    padding-left: 50px;
-    outline: none;
-}
-.btn{
-    position: absolute;
-    right: 80px; 
-    top: 50%; transform: translateY(-50%);
-    border: none;
-    background: none;
-    outline: none;
-}
-.close{
-    position: absolute;
-    right: 30px;
-    top: 50%; transform: translateY(-50%);
-    border: none;
-    background: none;
-    outline: none;
-}
-button img{
-    width: 30px;
-    height: 30px;
-}
-
-/* main-menu */
-.hold {
+    /* main-menu 영역 */
+    .hold {
     width: 100%;
     height: 300px;
     border-bottom: 1px solid rgba(0,0,0,0.2);
@@ -182,6 +42,7 @@ button img{
     height: 80px;
     margin: 0 auto;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    display: flex;
 }
 #main-menu .depth1 {
     width: 1200px;
@@ -232,7 +93,68 @@ button img{
     color: #03a665;
     font-weight: bold;
 }
-
+    /* search 영역 */
+    .searchtop{
+    width: 100%;
+    height: 120px;
+    opacity: 0;
+    height: 0;
+    transition: 0.5s;
+    overflow: hidden;
+    background: #fff;
+    position: fixed;
+    top: 80px;
+    z-index: 99;
+    padding: 20px;
+}
+.searchtop.show{
+    width: 100%;
+    opacity: 1;
+    height: 120px;
+    transition: 0.5s;
+}
+.searchtop-container{
+    position: relative;
+    width: 100%;
+    height: 80px;
+    margin: 0 auto;
+    /* border: 1px solid red; */
+}
+.inp{
+    display: inline-block;
+    width: 100%;
+    height: 80px;
+    border: 1px solid #03A665;
+    box-sizing: border-box;
+}
+.inp input{
+    width: 400px;
+    height: 78px;
+    border: none;
+    font-size: 1.2em;
+    padding-left: 50px;
+    outline: none;
+}
+.btn{
+    position: absolute;
+    right: 60px; 
+    top: 50%; transform: translateY(-50%);
+    border: none;
+    background: none;
+    outline: none;
+}
+.close{
+    position: absolute;
+    right: 30px;
+    top: 50%; transform: translateY(-50%);
+    border: none;
+    background: none;
+    outline: none;
+}
+button img{
+    width: 20px;
+    height: 20px;
+}
 /* visual */
 #visual{
     margin-top: 80px;
@@ -244,7 +166,7 @@ button img{
 }
 .slider{
     position: relative;
-    width: 100%;
+    width: 768px;
     height: 860px;
 }
 .slider div{
@@ -256,7 +178,7 @@ button img{
     position: absolute;
     left: 0; top: 0;
     width: 50%;
-    height: 860px;
+    height: 820px;
     background: #fff;
     text-align: center;
 }
@@ -264,14 +186,14 @@ button img{
     position: absolute;
     right: 0; top: 0;
     width: 50%;
-    height: 860px;
+    height: 820px;
     background: #b42db0;
     text-align: left;
 }
 .left1-top-txt1{
     position: absolute;
-    top: 20%; transform: translateY(-20%);
-    left: 40%; transform: translateX(-40%);
+    top: 15%; transform: translateY(-15%);
+    left: 35%; transform: translateX(-35%);
     line-height: 1.5;
     animation-duration: 2s;
     animation-name: left1-top-txt1;
@@ -284,17 +206,17 @@ button img{
     }
   
     to {
-        left: 40%; transform: translateX(-40%);
+        /* left: 40%; transform: translateX(-40%); */
       opacity: 1;
     }
 }
 .left1-top-txt1 h1{
-    font-size: 2.5em;
-    width: 130%;
+    font-size: 20px;
+    width: 140%;
 }
 .left1-bottom-img1{
     position: absolute;
-    top: 50%; transform: translateY(-50%);
+    top: 35%; transform: translateY(-35%);
     left: 50%; transform: translateX(-50%);
     animation-duration: 2s;
     animation-name: left1-bottom-img1;
@@ -307,36 +229,31 @@ button img{
     }
   
     to {
-        left: 50%; transform: translateX(-50%);
+        /* left: 50%; transform: translateX(-50%); */
       opacity: 1;
     }
   }
-.left1-top-txt1 h1 strong{
-    color: #b42db0;
-    font-size: 1.5em;
-    font-style: italic;
-}
-.left1-top-txt1 h1 span{
-    font-size: 1.5em;
-    font-style: italic;
-}
+  .left1-bottom-img1 > img{
+      transform: scale(2);
+  }
 .right1-txt1{
+    /* border-top: 1px solid white; */
     position: absolute;
-    top: 20%; transform: translateY(-20%);
-    left: 25%; transform: translateX(-25%);
+    top: 40%; transform: translateY(-40%);
+    left: 35%; transform: translateX(-35%);
 }
 .right1-txt1 h1{
-    font-size: 6em;
-    width: 120%;
+    font-size: 3em;
+    width: 140%;
     color: white;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
     animation-duration: 2s;
     animation-name: right1-txtk1;
     animation-direction: alternate;
 }
 @keyframes right1-txtk1 {
     from {
-        top: 50%; transform: translateY(-50%);
+        top: 35%; transform: translateY(-35%);
       opacity: 0; 
     }
   
@@ -344,10 +261,18 @@ button img{
       opacity: 1;
     }
   }
-
+.left1-top-txt1 h1 strong{
+    color: #b42db0;
+    font-size: 30px;
+    font-style: italic;
+}
+.left1-top-txt1 h1 span{
+    font-size: 30px;
+    font-style: italic;
+}
 .right1-txt1 h2{
-    font-size: 2em;
-    color: white;
+    font-size: 1.2em;
+    /* color: white; */
     margin-bottom: 15px;
     animation-duration: 2s;
     animation-name: right1-txtk2;
@@ -365,9 +290,9 @@ button img{
     }
   }
 .right1-txt1 p{
-    font-size: 1.2em;
+    font-size: 0.8em;
     color: white;
-    width: 110%;
+    width: 130%;
     animation-duration: 2s;
     animation-name: right1-txtk3;
     animation-direction: alternate;
@@ -402,38 +327,39 @@ button img{
 }
 .left2-top-txt1{
     position: absolute;
-    top: 10%; transform: translateY(-10%);
-    left: 50%; transform: translateX(-50%);
+    top: 15%; transform: translateY(-15%);
+    left: 40%; transform: translateX(-40%);
     animation-duration: 2s;
     animation-name: left2-top-txt1;
     animation-direction: alternate;
 }
 .left2-top-txt1 h1{
-    font-size: 3em;
+    font-size: 2em;
+    width: 120%;
 }
 .left2-top-txt1 h2{
     font-size: 1.1em;
     /* color: #f2940c; */
 }
 .left2-top-txt1 h1 strong{
-    font-size: 2em;
+    font-size: 1.5em;
     color: #e19fb0;
     font-style: italic;
 }
 @keyframes left2-top-txt1 {
     from {
-        left: 40%; transform: translateX(-40%);
+        left: 30%; transform: translateX(-30%);
       opacity: 0; 
     }
   
     to {
-        left: 50%; transform: translateX(-50%);
+        /* left: 50%; transform: translateX(-50%); */
       opacity: 1;
     }
   }
 .left2-bottom-img1{
     position: absolute;
-    top: 50%; transform: translateY(-50%);
+    top: 35%; transform: translateY(-35%);
     left: 50%; transform: translateX(-50%);
     animation-duration: 2s;
     animation-name: left2-bottom-img1;
@@ -450,16 +376,19 @@ button img{
       opacity: 1;
     }
   }
+  .left2-bottom-img1 img{
+      transform: scale(1.8);
+  }
 .right2-txt2{
     position: absolute;
-    top: 20%; transform: translateY(-20%);
+    top: 45%; transform: translateY(-45%);
     left: 25%; transform: translateX(-25%);
 }
 .right2-txt2 h1{
-    font-size: 3.6em;
-    width: 150%;
+    font-size: 2em;
+    width: 170%;
     color: white;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
     animation-duration: 2s;
     animation-name: right2-txtk1;
     animation-direction: alternate;
@@ -475,7 +404,7 @@ button img{
     }
   }
 .right2-txt2 h2{
-    font-size: 2em;
+    font-size: 1.5em;
     color: white;
     margin-bottom: 15px;
     animation-duration: 2s;
@@ -494,7 +423,8 @@ button img{
     }
   }
 .right2-txt2 p{
-    font-size: 1.2em;
+    font-size: 1em;
+    width: 150%;
     color: white;
     animation-duration: 2s;
     animation-name: right1-txtk3;
@@ -531,14 +461,14 @@ button img{
 }
 .left3-top-txt1{
     position: absolute;
-    top: 20%; transform: translateY(-20%);
+    top: 15%; transform: translateY(-15%);
     left: 50%; transform: translateX(-50%);
     animation-duration: 2s;
     animation-name: left3-top-txt1;
     animation-direction: alternate;
 }
 .left3-top-txt1 h1{
-    font-size: 1.8em;
+    font-size: 1.5em;
 }
 @keyframes left3-top-txt1 {
     from {
@@ -553,7 +483,7 @@ button img{
   }
 .left3-bottom-img1{
     position: absolute;
-    top: 50%; transform: translateY(-50%);
+    top: 40%; transform: translateY(-40%);
     left: 50%; transform: translateX(-50%);
     animation-duration: 2s;
     animation-name: left3-bottom-img1;
@@ -570,16 +500,19 @@ button img{
       opacity: 1;
     }
   }
+  .left3-bottom-img1 img{
+      transform: scale(1.5);
+  }
 .right3-txt2{
     position: absolute;
-    top: 20%; transform: translateY(-20%);
+    top: 45%; transform: translateY(-45%);
     left: 25%; transform: translateX(-25%);
 }
 .right3-txt2 h1{
-    font-size: 5em;
+    font-size: 2em;
     width: 150%;
     color: white;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
     animation-duration: 2s;
     animation-name: right3-txtk1;
     animation-direction: alternate;
@@ -595,7 +528,8 @@ button img{
     }
   }
 .right3-txt2 h2{
-    font-size: 2em;
+    font-size: 1.2em;
+    width: 140%;
     color: white;
     margin-bottom: 15px;
     animation-duration: 2s;
@@ -614,7 +548,8 @@ button img{
     }
   }
 .right3-txt2 p{
-    font-size: 1.2em;
+    font-size: 0.9em;
+    width: 150%;
     color: white;
     animation-duration: 2s;
     animation-name: right3-txtk3;
@@ -634,10 +569,14 @@ button img{
 .left3-bottom-img1 img{
     width: 350px;
 }
-/* content1 */
+/* quick 영역 제거 */
+#quick-menu{
+    display: none;
+}
+/* content1 영역 */
 #content1{
     position: relative;
-    display: flex;
+    /* display: flex; */
     width: 100%;
     height: 900px;
     font-family: 'Noto Sans KR', sans-serif;
@@ -661,72 +600,85 @@ button img{
     color: white;
 }
 .content1-item1{
+    position: absolute;
     text-align: center;
-    width: 25%;
+    width: 50%;
+    height: 450px;
+    left: 0; top: 0;
     padding-top: 80px;
 }
 .content1-item2{
+    position: absolute;
     text-align: center;
-    width: 25%;
+    width: 50%;
+    height: 450px;
+    left: 50%;
     padding-top: 80px;
-    background: rgba(255, 194, 13, 0.3);
 }
 .content1-item3{
+    position: absolute;
     text-align: center;
-    width: 25%;
-    padding-top: 80px;
-}
-.content1-item4{
-    text-align: center;
-    width: 25%;
+    width: 50%;
+    height: 450px;
+    left: 0; top: 50%;
     padding-top: 80px;
     background: rgba(255, 194, 13, 0.3);
+}
+.content1-item4{
+    position: absolute;
+    text-align: center;
+    width: 50%;
+    height: 450px;
+    padding-top: 80px;
+    left: 50%; top: 50%;
+    background: none;
 }
 .content1-item1 img{
     position: absolute;
-    left: 2%; top:50%;
-    width: 25%;
-    transform: scale(1);
+    left: 0; top: 200px;
+    width: 400px;
+    transform: scale(0.5);
     transition: all .3s linear;
 }
 .content1-item2 img{
     position: absolute;
-    left: 28%; top:55%;
-    width: 20%;
-    transform: scale(1);
+    left: -20px; top: 250px;
+    width: 400px;
+    transform: scale(0.5);
     transition: all .3s linear;
 }
 .content1-item3 img{
     position: absolute;
-    left: 52%; top: 55%;
-    width: 20%;
-    transform: scale(1);
+    left: -10px; top: 200px;
+    width: 400px;
+    transform: scale(0.5);
     transition: all .3s linear;
 }
 .content1-item4 img{
     position: absolute;
-    left: 76%; top:55%;
-    width: 20%;
-    transform: scale(1);
+    left: -20px; top: 240px;
+    width: 400px;
+    transform: scale(0.5);
     transition: all .3s linear;
 }
 .content1-item1 img:hover{
-    transform: scale(1.2);
+    transform: scale(0.7);
     transition: all .3s linear;
 }
 .content1-item2 img:hover{
-    transform: scale(1.2);
+    transform: scale(0.7);
     transition: all .3s linear;
 }
 .content1-item3 img:hover{
-    transform: scale(1.2);
+    transform: scale(0.7);
     transition: all .3s linear;
 }
 .content1-item4 img:hover{
-    transform: scale(1.2);
+    transform: scale(0.7);
     transition: all .3s linear;
 }
-/* content2 */
+
+/* content2 영역 */
 #content2{
     background-image: url(../images/content2-img.jpg);
     background-size: cover;
@@ -736,8 +688,7 @@ button img{
 }
 .contents2-container {
     position: relative;
-    max-width: 1200px;
-    min-width: 768px;
+    width: 100%;
     height: 900px;
     margin: 0 auto;
     text-align: center;
@@ -747,13 +698,13 @@ button img{
 .contents2-container h1{
     padding-top: 70px;
     margin-bottom: 65px;
-    font-size: 4em;
+    font-size: 3em;
     color: white;
     font-family: 'Noto Sans KR', sans-serif;
     text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
 }
 .contents2-container > p{
-    font-size: 1.5em;
+    font-size: 1em;
     font-weight: bold;
     margin-bottom: 100px;
     color: white;
@@ -784,7 +735,7 @@ button img{
     position: absolute;
     width: 250px;
     height: 250px;
-    left: 0; top: 300px;
+    left: 10%; top: 300px;
     border: 1px solid #ccc;
     border-radius: 50%;
     transform: scale(1);
@@ -813,7 +764,7 @@ button img{
     position: absolute;
     width: 250px;
     height: 250px;
-    left: 310px; top: 500px;
+    left: 10%; top: 600px;
     border: 1px solid #ccc;
     border-radius: 50%;
     transform: scale(1);
@@ -842,7 +793,7 @@ button img{
     position: absolute;
     width: 250px;
     height: 250px;
-    left: 630px;
+    left: 55%; top: 300px;
     border: 1px solid #ccc;
     border-radius: 50%;
     transform: scale(1);
@@ -871,7 +822,7 @@ button img{
     position: absolute;
     width: 250px;
     height: 250px;
-    left: 950px; top: 450px;
+    left: 55%; top: 600px;
     border: 1px solid #ccc;
     border-radius: 50%;
     transform: scale(1);
@@ -895,29 +846,33 @@ button img{
 }
 .content2-box1-txt.show{
     position: absolute;
+    width: 100%;
     top: 45%; transform: translateY(-45%);
-    left: 7%;
+    left: 0;
     line-height: 1.2;
     /* background: #ccc; */
 }
 .content2-box2-txt.show{
     position: absolute;
+    width: 100%;
     top: 50%; transform: translateY(-50%);
-    left: 5%;
+    left: 0;
     line-height: 1.2;
     /* background: #ccc; */
 }
 .content2-box3-txt.show{
     position: absolute;
+    width: 100%;
     top: 45%; transform: translateY(-45%);
-    left: 7%;
+    left: 0;
     line-height: 1.2;
     /* background: #ccc; */
 }
 .content2-box4-txt.show{
     position: absolute;
+    width: 100%;
     top: 45%; transform: translateY(-45%);
-    left: 10%;
+    left: 0;
     line-height: 1.2;
     /* background: #ccc; */
 }
@@ -937,9 +892,9 @@ button img{
 .content2-box3.show,
 .content2-box4.show {
     display: block;
-} 
+}
 
-
+/* content3 */
 /* content3 */
 #content3{
     width: 100%;
@@ -947,35 +902,32 @@ button img{
     background: #efefef;
 }
 #content3 .content3-container{
-    max-width: 1200px;
+    width: 100%;
+    height: 900px;
     margin: 0 auto;
     text-align: center;
     font-family: 'Noto Sans KR', sans-serif;
 }
 .content3-container h1{
-    /* width: 100%; */
     padding-top: 70px;
     margin-bottom: 65px;
-    font-size: 4em;
+    font-size: 3em;
 }
 .content3-container > p{
-    /* width: 100%; */
-    font-size: 1.5em;
+    font-size: 1em;
     font-weight: bold;
     margin-bottom: 100px;
 }
 .content3-box{
     position: relative;
-    display: flex;
-    max-width: 1200px;
-    min-width: 768px;
-    height: 400px;
+    width: 100%;
+    margin: 0 auto;
     text-align: center;
     background: #ccc;
 }
 #content3 h3{
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
-    font-size: 1.5em;
+    font-size: 1.2em;
     margin-bottom: 10px;
     color: white;
     font-weight: bold;
@@ -983,7 +935,7 @@ button img{
 .content3-box p{
     width: 100%;
     margin-bottom: 20px;
-    font-size: 0.9em;
+    font-size: 0.7em;
     color: white;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
     /* font-weight: bold; */
@@ -1067,8 +1019,9 @@ button img{
     line-height: 1.6;
 }
 .content3-box3-txt p{
-    margin-bottom: 45px;
+    margin-bottom: 36px;
 }
+
 /* content4 */
 #content4{
     width: 100%;
@@ -1076,8 +1029,8 @@ button img{
     background: #ffc20d;
 }
 #content4 .content4-container{
-    max-width: 1200px;
-    min-width: 768px;
+    width: 100%;
+    height: 900px;
     margin: 0 auto;
     text-align: center;
     font-family: 'Noto Sans KR', sans-serif;
@@ -1085,12 +1038,12 @@ button img{
 .content4-container h1{
     padding-top: 70px;
     margin-bottom: 65px;
-    font-size: 4em;
+    font-size: 3em;
     color: white;
     text-shadow: 1px 1px 2px black;
 }
 .content4-container > p{
-    font-size: 1.5em;
+    font-size: 1em;
     font-weight: bold;
     margin-bottom: 10px;
     color: white;
@@ -1098,9 +1051,10 @@ button img{
 }
 .content4-container > p a{
     font-size: 1.1em;
-    line-height: 2;
+    line-height: 3;
 }
 .content4-icons{
+    width: 100%;
     display: flex;
     margin-top: 100px;
 }
@@ -1117,25 +1071,8 @@ button img{
     display: inline-block;
 }
 .content4-icons a img {
-    width: 100%;
-    /* height: 30px; */
-}
-/* quick menu */
-#quick-menu{
-    position: fixed;
-    width: 100px;
-    right: 2%;
-    top: 70%; transform: translateY(-70%);
-    z-index: 80; 
-}
-#quick-menu .quick-menu-container .quick-menu-ul .layer{
-    position: absolute;
-    right: 25px;
-    opacity: 0;
-}
-#quick-menu .quick-menu-container .quick-menu-ul li:hover .layer{
-    opacity: 1;
-    z-index: -1;
+    width: 30px;
+    height: 30px;
 }
 /* footer */
 footer {
@@ -1146,16 +1083,17 @@ footer {
 }
 footer .footer-logo {
     position: absolute;
-    width: 200px;
+    width: 150px;
     height: 50px;
-    left: 60px; top: 50%;
+    left: 40%; top: 15%;
+    transform: translateX(-40%);
     transform: translateY(-50%);
 }
 footer .footer-link {
-    width: 1200px;
+    width: 70%;
     margin: 0 auto;
     text-align: center;
-    padding-top: 50px;
+    padding-top: 60px;
 }
 
 footer .footer-link li {
@@ -1173,10 +1111,10 @@ footer .footer-link span {
     padding: 0 10px;
 }
 footer .footer-info {
-    width: 1200px;
+    width: 100%;
     margin: 0 auto;
     text-align: center;
-    padding-top: 50px;
+    padding-top: 30px;
 }
 footer .footer-info li {
     display: inline-block;
@@ -1196,6 +1134,6 @@ footer .footer-web {
     width: 65px;
     height: 50px;
     position: absolute;
-    top: 50%; right: 10%;
-    transform: translateY(-50%);
+    top: 70%; right: 10%;
+}
 }
