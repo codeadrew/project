@@ -243,20 +243,14 @@ button img{
     margin: 0 auto;
 }
 #visual .visual-txt {
-    width: 80%;
+    width: 100%;
     position: absolute;
     top: 70px;
     color: #fff;
     font-family: 'Noto Sans KR', sans-serif;
 }
 #visual .visual-txt h1 {
-    display: block;
     font-size: 42px;
-    width: 300px;
-}
-#visual .visual-txt p{
-    display: block;
-    width: 500px;
 }
 
 /* sub-menu */
